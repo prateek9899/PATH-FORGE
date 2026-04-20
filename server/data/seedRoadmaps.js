@@ -2,7 +2,7 @@
  * Seed Script – Populates MongoDB with predefined roadmaps.
  * Run: node data/seedRoadmaps.js
  *
- * Contains 4 comprehensive roadmaps: DSA, MERN, Java Backend, Data Science.
+ * Contains 9 comprehensive roadmaps: DSA, MERN, Java Backend, Data Science, Ethical Hacking, Frontend, Backend, Software Engineering, DevOps.
  * Each roadmap has multiple sections with topics and subtopics.
  */
 require('dotenv').config();
@@ -699,6 +699,959 @@ const roadmaps = [
               { title: 'Flask / FastAPI for Model Serving' },
               { title: 'Docker for ML Models' },
               { title: 'MLOps Overview' },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+
+  // ============================================================
+  // 5. Ethical Hacking Roadmap
+  // ============================================================
+  {
+    title: 'Ethical Hacking & Cybersecurity',
+    slug: 'ethical-hacking',
+    description: 'Learn ethical hacking from networking fundamentals to advanced penetration testing, bug bounty hunting, and security operations.',
+    domain: 'Ethical Hacking',
+    icon: '🔓',
+    sections: [
+      {
+        title: 'Networking Fundamentals',
+        order: 1,
+        topics: [
+          {
+            title: 'OSI & TCP/IP Models',
+            difficulty: 'beginner',
+            estimatedMinutes: 60,
+            subtopics: [
+              { title: '7 Layers of the OSI Model' },
+              { title: 'TCP vs UDP Protocols' },
+              { title: 'IP Addressing & Subnetting' },
+            ],
+          },
+          {
+            title: 'DNS, DHCP & HTTP',
+            difficulty: 'beginner',
+            estimatedMinutes: 45,
+            subtopics: [
+              { title: 'DNS Resolution Process' },
+              { title: 'HTTP/HTTPS & SSL/TLS Handshake' },
+              { title: 'DHCP Lease Process' },
+            ],
+          },
+          {
+            title: 'Firewalls & Network Security',
+            difficulty: 'intermediate',
+            estimatedMinutes: 60,
+            subtopics: [
+              { title: 'Packet Filtering & Stateful Inspection' },
+              { title: 'IDS vs IPS Systems' },
+              { title: 'VPN & Tunneling Protocols' },
+            ],
+          },
+        ],
+      },
+      {
+        title: 'Linux & Scripting',
+        order: 2,
+        topics: [
+          {
+            title: 'Linux Command Line Mastery',
+            difficulty: 'beginner',
+            estimatedMinutes: 75,
+            subtopics: [
+              { title: 'File System Navigation & Permissions' },
+              { title: 'Process Management & Cron Jobs' },
+              { title: 'User Management & SSH' },
+            ],
+          },
+          {
+            title: 'Bash & Python Scripting',
+            difficulty: 'intermediate',
+            estimatedMinutes: 90,
+            subtopics: [
+              { title: 'Bash Automation Scripts' },
+              { title: 'Python for Security (Scapy, Requests)' },
+              { title: 'Writing Custom Exploit Scripts' },
+            ],
+          },
+        ],
+      },
+      {
+        title: 'Reconnaissance & Scanning',
+        order: 3,
+        topics: [
+          {
+            title: 'Passive Reconnaissance',
+            difficulty: 'intermediate',
+            estimatedMinutes: 60,
+            subtopics: [
+              { title: 'OSINT Techniques & Tools' },
+              { title: 'Google Dorking & Shodan' },
+              { title: 'WHOIS & DNS Enumeration' },
+            ],
+          },
+          {
+            title: 'Active Scanning & Enumeration',
+            difficulty: 'intermediate',
+            estimatedMinutes: 75,
+            subtopics: [
+              { title: 'Nmap Scanning Techniques' },
+              { title: 'Service & Version Detection' },
+              { title: 'Vulnerability Scanning (Nessus, OpenVAS)' },
+            ],
+          },
+        ],
+      },
+      {
+        title: 'Web Application Security',
+        order: 4,
+        topics: [
+          {
+            title: 'OWASP Top 10 Vulnerabilities',
+            difficulty: 'intermediate',
+            estimatedMinutes: 120,
+            subtopics: [
+              { title: 'SQL Injection & Prevention' },
+              { title: 'Cross-Site Scripting (XSS)' },
+              { title: 'Broken Authentication & Session Management' },
+              { title: 'CSRF & SSRF Attacks' },
+            ],
+          },
+          {
+            title: 'Web Exploitation Tools',
+            difficulty: 'advanced',
+            estimatedMinutes: 90,
+            subtopics: [
+              { title: 'Burp Suite Mastery' },
+              { title: 'SQLMap & Directory Busting' },
+              { title: 'API Security Testing' },
+            ],
+          },
+        ],
+      },
+      {
+        title: 'System Hacking & Post-Exploitation',
+        order: 5,
+        topics: [
+          {
+            title: 'Exploitation Frameworks',
+            difficulty: 'advanced',
+            estimatedMinutes: 90,
+            subtopics: [
+              { title: 'Metasploit Framework Deep Dive' },
+              { title: 'Payload Generation & Delivery' },
+              { title: 'Privilege Escalation (Linux & Windows)' },
+            ],
+          },
+          {
+            title: 'Post-Exploitation & Reporting',
+            difficulty: 'advanced',
+            estimatedMinutes: 75,
+            subtopics: [
+              { title: 'Persistence & Lateral Movement' },
+              { title: 'Data Exfiltration Techniques' },
+              { title: 'Professional Pentest Reporting' },
+            ],
+          },
+        ],
+      },
+      {
+        title: 'Bug Bounty & Career',
+        order: 6,
+        topics: [
+          {
+            title: 'Bug Bounty Hunting',
+            difficulty: 'advanced',
+            estimatedMinutes: 60,
+            subtopics: [
+              { title: 'HackerOne & Bugcrowd Platforms' },
+              { title: 'Writing Quality Bug Reports' },
+              { title: 'Recon Automation Workflows' },
+            ],
+          },
+          {
+            title: 'Certifications & Career Path',
+            difficulty: 'beginner',
+            estimatedMinutes: 30,
+            subtopics: [
+              { title: 'CEH, OSCP, CompTIA Security+' },
+              { title: 'Building a Security Portfolio' },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+
+  // ============================================================
+  // 6. Frontend Developer Roadmap
+  // ============================================================
+  {
+    title: 'Frontend Developer',
+    slug: 'frontend-developer',
+    description: 'Master modern frontend development from HTML/CSS basics to advanced React patterns, performance optimization, and design systems.',
+    domain: 'Frontend',
+    icon: '🎨',
+    sections: [
+      {
+        title: 'HTML & CSS Foundations',
+        order: 1,
+        topics: [
+          {
+            title: 'Semantic HTML5',
+            difficulty: 'beginner',
+            estimatedMinutes: 45,
+            subtopics: [
+              { title: 'Document Structure & Meta Tags' },
+              { title: 'Forms, Tables & Accessibility (a11y)' },
+              { title: 'SEO Best Practices in HTML' },
+            ],
+          },
+          {
+            title: 'Modern CSS & Layouts',
+            difficulty: 'beginner',
+            estimatedMinutes: 90,
+            subtopics: [
+              { title: 'Flexbox Deep Dive' },
+              { title: 'CSS Grid System' },
+              { title: 'Responsive Design & Media Queries' },
+            ],
+          },
+          {
+            title: 'CSS Preprocessors & Architecture',
+            difficulty: 'intermediate',
+            estimatedMinutes: 60,
+            subtopics: [
+              { title: 'SASS/SCSS Variables & Mixins' },
+              { title: 'BEM Naming Convention' },
+              { title: 'CSS Custom Properties (Variables)' },
+            ],
+          },
+        ],
+      },
+      {
+        title: 'JavaScript Mastery',
+        order: 2,
+        topics: [
+          {
+            title: 'Core JavaScript Concepts',
+            difficulty: 'beginner',
+            estimatedMinutes: 90,
+            subtopics: [
+              { title: 'Closures, Hoisting & Scope Chain' },
+              { title: 'Prototypal Inheritance & this Keyword' },
+              { title: 'Event Loop & Callback Queue' },
+            ],
+          },
+          {
+            title: 'ES6+ & Modern Patterns',
+            difficulty: 'intermediate',
+            estimatedMinutes: 75,
+            subtopics: [
+              { title: 'Destructuring, Spread & Rest' },
+              { title: 'Promises, Async/Await & Error Handling' },
+              { title: 'Modules (import/export) & Bundling' },
+            ],
+          },
+          {
+            title: 'TypeScript Essentials',
+            difficulty: 'intermediate',
+            estimatedMinutes: 90,
+            subtopics: [
+              { title: 'Type Annotations & Interfaces' },
+              { title: 'Generics & Utility Types' },
+              { title: 'TypeScript with React' },
+            ],
+          },
+        ],
+      },
+      {
+        title: 'React.js Advanced',
+        order: 3,
+        topics: [
+          {
+            title: 'Component Architecture',
+            difficulty: 'intermediate',
+            estimatedMinutes: 75,
+            subtopics: [
+              { title: 'Functional Components & JSX' },
+              { title: 'Component Composition Patterns' },
+              { title: 'Higher-Order Components & Render Props' },
+            ],
+          },
+          {
+            title: 'State Management Deep Dive',
+            difficulty: 'intermediate',
+            estimatedMinutes: 90,
+            subtopics: [
+              { title: 'Context API & useReducer' },
+              { title: 'Redux Toolkit & RTK Query' },
+              { title: 'Zustand & Jotai (Lightweight Alternatives)' },
+            ],
+          },
+          {
+            title: 'React Performance Optimization',
+            difficulty: 'advanced',
+            estimatedMinutes: 60,
+            subtopics: [
+              { title: 'React.memo, useMemo & useCallback' },
+              { title: 'Code Splitting & Lazy Loading' },
+              { title: 'React Profiler & DevTools' },
+            ],
+          },
+        ],
+      },
+      {
+        title: 'Build Tools & Testing',
+        order: 4,
+        topics: [
+          {
+            title: 'Build Tools & Module Bundlers',
+            difficulty: 'intermediate',
+            estimatedMinutes: 60,
+            subtopics: [
+              { title: 'Vite vs Webpack Comparison' },
+              { title: 'Babel & Transpilation' },
+              { title: 'Environment Variables & Config' },
+            ],
+          },
+          {
+            title: 'Frontend Testing',
+            difficulty: 'intermediate',
+            estimatedMinutes: 75,
+            subtopics: [
+              { title: 'Jest Unit Testing' },
+              { title: 'React Testing Library' },
+              { title: 'Cypress E2E Testing' },
+            ],
+          },
+        ],
+      },
+      {
+        title: 'UI/UX & Design Systems',
+        order: 5,
+        topics: [
+          {
+            title: 'Animation & Micro-Interactions',
+            difficulty: 'intermediate',
+            estimatedMinutes: 60,
+            subtopics: [
+              { title: 'CSS Transitions & Keyframes' },
+              { title: 'Framer Motion Library' },
+              { title: 'GSAP for Complex Animations' },
+            ],
+          },
+          {
+            title: 'Design System Implementation',
+            difficulty: 'advanced',
+            estimatedMinutes: 75,
+            subtopics: [
+              { title: 'Component Library Architecture' },
+              { title: 'Storybook for Visual Testing' },
+              { title: 'Tailwind CSS & Utility-First Design' },
+            ],
+          },
+          {
+            title: 'Web Performance & Core Vitals',
+            difficulty: 'advanced',
+            estimatedMinutes: 60,
+            subtopics: [
+              { title: 'LCP, FID & CLS Optimization' },
+              { title: 'Image Optimization & Lazy Loading' },
+              { title: 'Service Workers & PWA Basics' },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+
+  // ============================================================
+  // 7. Backend Developer Roadmap
+  // ============================================================
+  {
+    title: 'Backend Developer',
+    slug: 'backend-developer',
+    description: 'Learn backend engineering from API design and databases to system design, caching, message queues, and production deployments.',
+    domain: 'Backend',
+    icon: '⚙️',
+    sections: [
+      {
+        title: 'Programming Foundations',
+        order: 1,
+        topics: [
+          {
+            title: 'Choose Your Language',
+            difficulty: 'beginner',
+            estimatedMinutes: 60,
+            subtopics: [
+              { title: 'Node.js / Python / Java / Go Overview' },
+              { title: 'Language Paradigms (OOP vs Functional)' },
+              { title: 'Package Managers & Project Setup' },
+            ],
+          },
+          {
+            title: 'Data Structures for Backend',
+            difficulty: 'beginner',
+            estimatedMinutes: 75,
+            subtopics: [
+              { title: 'Hash Maps, Queues & Stacks' },
+              { title: 'Trees & Graphs (for DB Indexes)' },
+              { title: 'Big-O Analysis for API Performance' },
+            ],
+          },
+        ],
+      },
+      {
+        title: 'API Design & Development',
+        order: 2,
+        topics: [
+          {
+            title: 'RESTful API Architecture',
+            difficulty: 'beginner',
+            estimatedMinutes: 90,
+            subtopics: [
+              { title: 'HTTP Methods & Status Codes' },
+              { title: 'Resource Naming & Versioning' },
+              { title: 'Pagination, Filtering & Sorting' },
+            ],
+          },
+          {
+            title: 'GraphQL Fundamentals',
+            difficulty: 'intermediate',
+            estimatedMinutes: 75,
+            subtopics: [
+              { title: 'Schemas, Queries & Mutations' },
+              { title: 'Resolvers & Data Loaders' },
+              { title: 'REST vs GraphQL Trade-offs' },
+            ],
+          },
+          {
+            title: 'API Security & Authentication',
+            difficulty: 'intermediate',
+            estimatedMinutes: 90,
+            subtopics: [
+              { title: 'JWT & OAuth 2.0 Flows' },
+              { title: 'API Rate Limiting & Throttling' },
+              { title: 'Input Validation & Sanitization' },
+            ],
+          },
+        ],
+      },
+      {
+        title: 'Databases',
+        order: 3,
+        topics: [
+          {
+            title: 'Relational Databases (SQL)',
+            difficulty: 'beginner',
+            estimatedMinutes: 90,
+            subtopics: [
+              { title: 'Schema Design & Normalization' },
+              { title: 'Joins, Subqueries & Indexes' },
+              { title: 'PostgreSQL / MySQL Deep Dive' },
+            ],
+          },
+          {
+            title: 'NoSQL Databases',
+            difficulty: 'intermediate',
+            estimatedMinutes: 75,
+            subtopics: [
+              { title: 'MongoDB Document Model' },
+              { title: 'Redis for Caching & Sessions' },
+              { title: 'When to Use SQL vs NoSQL' },
+            ],
+          },
+          {
+            title: 'Database Performance & Scaling',
+            difficulty: 'advanced',
+            estimatedMinutes: 60,
+            subtopics: [
+              { title: 'Query Optimization & EXPLAIN Analysis' },
+              { title: 'Sharding & Replication Strategies' },
+              { title: 'Database Migrations & Versioning' },
+            ],
+          },
+        ],
+      },
+      {
+        title: 'Caching & Message Queues',
+        order: 4,
+        topics: [
+          {
+            title: 'Caching Strategies',
+            difficulty: 'intermediate',
+            estimatedMinutes: 60,
+            subtopics: [
+              { title: 'Cache-Aside, Write-Through & Write-Behind' },
+              { title: 'Redis & Memcached Implementation' },
+              { title: 'CDN Caching & Cache Invalidation' },
+            ],
+          },
+          {
+            title: 'Message Queues & Event Streaming',
+            difficulty: 'advanced',
+            estimatedMinutes: 75,
+            subtopics: [
+              { title: 'RabbitMQ vs Kafka Architecture' },
+              { title: 'Pub/Sub & Task Queues (Bull, Celery)' },
+              { title: 'Event Sourcing & CQRS Pattern' },
+            ],
+          },
+        ],
+      },
+      {
+        title: 'DevOps & Deployment',
+        order: 5,
+        topics: [
+          {
+            title: 'Containerization & Docker',
+            difficulty: 'intermediate',
+            estimatedMinutes: 75,
+            subtopics: [
+              { title: 'Dockerfile & Multi-stage Builds' },
+              { title: 'Docker Compose for Microservices' },
+              { title: 'Container Registries & Image Optimization' },
+            ],
+          },
+          {
+            title: 'CI/CD & Cloud Deployment',
+            difficulty: 'intermediate',
+            estimatedMinutes: 60,
+            subtopics: [
+              { title: 'GitHub Actions & Jenkins Pipelines' },
+              { title: 'AWS / GCP / Azure Core Services' },
+              { title: 'Kubernetes Basics & Orchestration' },
+            ],
+          },
+          {
+            title: 'Monitoring & Observability',
+            difficulty: 'advanced',
+            estimatedMinutes: 60,
+            subtopics: [
+              { title: 'Logging (ELK Stack / Winston)' },
+              { title: 'Metrics & Alerting (Prometheus, Grafana)' },
+              { title: 'Distributed Tracing (Jaeger, OpenTelemetry)' },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+
+  // ============================================================
+  // 8. Software Engineer Roadmap
+  // ============================================================
+  {
+    title: 'Software Engineer',
+    slug: 'software-engineer',
+    description: 'A comprehensive guide to becoming a well-rounded software engineer covering CS fundamentals, design patterns, system design, and professional practices.',
+    domain: 'Software Engineering',
+    icon: '💻',
+    sections: [
+      {
+        title: 'Computer Science Fundamentals',
+        order: 1,
+        topics: [
+          {
+            title: 'Operating Systems Concepts',
+            difficulty: 'beginner',
+            estimatedMinutes: 90,
+            subtopics: [
+              { title: 'Processes, Threads & Concurrency' },
+              { title: 'Memory Management & Virtual Memory' },
+              { title: 'CPU Scheduling Algorithms' },
+            ],
+          },
+          {
+            title: 'Computer Networks',
+            difficulty: 'beginner',
+            estimatedMinutes: 75,
+            subtopics: [
+              { title: 'OSI Model & TCP/IP Stack' },
+              { title: 'HTTP/HTTPS, DNS & CDNs' },
+              { title: 'Sockets & WebSocket Communication' },
+            ],
+          },
+          {
+            title: 'Database Theory',
+            difficulty: 'intermediate',
+            estimatedMinutes: 75,
+            subtopics: [
+              { title: 'ACID Properties & Transactions' },
+              { title: 'Normalization (1NF – BCNF)' },
+              { title: 'CAP Theorem & Distributed Databases' },
+            ],
+          },
+        ],
+      },
+      {
+        title: 'Object-Oriented Design',
+        order: 2,
+        topics: [
+          {
+            title: 'SOLID Principles',
+            difficulty: 'intermediate',
+            estimatedMinutes: 75,
+            subtopics: [
+              { title: 'Single Responsibility & Open/Closed' },
+              { title: 'Liskov Substitution & Interface Segregation' },
+              { title: 'Dependency Inversion Principle' },
+            ],
+          },
+          {
+            title: 'Design Patterns',
+            difficulty: 'intermediate',
+            estimatedMinutes: 120,
+            subtopics: [
+              { title: 'Creational: Singleton, Factory, Builder' },
+              { title: 'Structural: Adapter, Decorator, Proxy' },
+              { title: 'Behavioral: Observer, Strategy, Command' },
+            ],
+          },
+          {
+            title: 'Clean Code & Refactoring',
+            difficulty: 'intermediate',
+            estimatedMinutes: 60,
+            subtopics: [
+              { title: 'Meaningful Names & Small Functions' },
+              { title: 'Code Smells & Refactoring Patterns' },
+              { title: 'DRY, KISS & YAGNI Principles' },
+            ],
+          },
+        ],
+      },
+      {
+        title: 'System Design',
+        order: 3,
+        topics: [
+          {
+            title: 'System Design Fundamentals',
+            difficulty: 'intermediate',
+            estimatedMinutes: 90,
+            subtopics: [
+              { title: 'Scalability: Vertical vs Horizontal' },
+              { title: 'Load Balancing Strategies' },
+              { title: 'Caching Layers & CDN Architecture' },
+            ],
+          },
+          {
+            title: 'High-Level Design (HLD)',
+            difficulty: 'advanced',
+            estimatedMinutes: 120,
+            subtopics: [
+              { title: 'Design URL Shortener (like bit.ly)' },
+              { title: 'Design Twitter/Instagram Feed' },
+              { title: 'Design Chat System (WhatsApp)' },
+            ],
+          },
+          {
+            title: 'Low-Level Design (LLD)',
+            difficulty: 'advanced',
+            estimatedMinutes: 90,
+            subtopics: [
+              { title: 'Parking Lot System Design' },
+              { title: 'Elevator System Design' },
+              { title: 'Library Management System' },
+            ],
+          },
+        ],
+      },
+      {
+        title: 'Version Control & Collaboration',
+        order: 4,
+        topics: [
+          {
+            title: 'Git Advanced Workflows',
+            difficulty: 'beginner',
+            estimatedMinutes: 60,
+            subtopics: [
+              { title: 'Branching Strategies (GitFlow, Trunk-Based)' },
+              { title: 'Rebasing, Cherry-Picking & Stashing' },
+              { title: 'Resolving Merge Conflicts' },
+            ],
+          },
+          {
+            title: 'Code Review & Collaboration',
+            difficulty: 'intermediate',
+            estimatedMinutes: 45,
+            subtopics: [
+              { title: 'Writing Effective Pull Requests' },
+              { title: 'Code Review Best Practices' },
+              { title: 'Agile & Scrum Methodologies' },
+            ],
+          },
+        ],
+      },
+      {
+        title: 'Testing & Quality Assurance',
+        order: 5,
+        topics: [
+          {
+            title: 'Testing Strategies',
+            difficulty: 'intermediate',
+            estimatedMinutes: 90,
+            subtopics: [
+              { title: 'Unit Testing & TDD (Test-Driven Development)' },
+              { title: 'Integration & End-to-End Testing' },
+              { title: 'Mocking, Stubbing & Test Doubles' },
+            ],
+          },
+          {
+            title: 'Software Architecture Patterns',
+            difficulty: 'advanced',
+            estimatedMinutes: 75,
+            subtopics: [
+              { title: 'Monolith vs Microservices vs Serverless' },
+              { title: 'Event-Driven Architecture' },
+              { title: 'Domain-Driven Design (DDD) Basics' },
+            ],
+          },
+        ],
+      },
+      {
+        title: 'Career & Interview Preparation',
+        order: 6,
+        topics: [
+          {
+            title: 'Technical Interview Strategy',
+            difficulty: 'intermediate',
+            estimatedMinutes: 60,
+            subtopics: [
+              { title: 'Problem-Solving Framework (UMPIRE)' },
+              { title: 'Coding Interview Patterns' },
+              { title: 'System Design Interview Framework' },
+            ],
+          },
+          {
+            title: 'Building Your Profile',
+            difficulty: 'beginner',
+            estimatedMinutes: 45,
+            subtopics: [
+              { title: 'Open Source Contributions' },
+              { title: 'Portfolio Projects That Stand Out' },
+              { title: 'Resume & LinkedIn Optimization' },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+
+  // ============================================================
+  // 9. DevOps Roadmap
+  // ============================================================
+  {
+    title: 'DevOps Engineer',
+    slug: 'devops-engineer',
+    description: 'Master the DevOps lifecycle from Linux administration, CI/CD pipelines, containerization, orchestration, cloud infrastructure, to monitoring and SRE practices.',
+    domain: 'DevOps',
+    icon: '🔄',
+    sections: [
+      {
+        title: 'Linux & Scripting',
+        order: 1,
+        topics: [
+          {
+            title: 'Linux System Administration',
+            difficulty: 'beginner',
+            estimatedMinutes: 90,
+            subtopics: [
+              { title: 'File System, Permissions & Ownership' },
+              { title: 'Process Management & Systemd' },
+              { title: 'Package Managers (apt, yum, dnf)' },
+            ],
+          },
+          {
+            title: 'Shell Scripting & Automation',
+            difficulty: 'intermediate',
+            estimatedMinutes: 75,
+            subtopics: [
+              { title: 'Bash Variables, Loops & Functions' },
+              { title: 'Cron Jobs & Task Scheduling' },
+              { title: 'Text Processing (grep, awk, sed)' },
+            ],
+          },
+          {
+            title: 'Networking for DevOps',
+            difficulty: 'beginner',
+            estimatedMinutes: 60,
+            subtopics: [
+              { title: 'DNS, DHCP & IP Addressing' },
+              { title: 'SSH, SCP & Port Forwarding' },
+              { title: 'Firewalls (iptables, ufw) & Security Groups' },
+            ],
+          },
+        ],
+      },
+      {
+        title: 'Version Control & CI/CD',
+        order: 2,
+        topics: [
+          {
+            title: 'Git for DevOps',
+            difficulty: 'beginner',
+            estimatedMinutes: 60,
+            subtopics: [
+              { title: 'Branching Strategies (GitFlow, Trunk-based)' },
+              { title: 'Merge Conflicts & Rebasing' },
+              { title: 'Git Hooks & Automation' },
+            ],
+          },
+          {
+            title: 'CI/CD Pipeline Design',
+            difficulty: 'intermediate',
+            estimatedMinutes: 90,
+            subtopics: [
+              { title: 'GitHub Actions Workflows' },
+              { title: 'Jenkins Pipeline as Code' },
+              { title: 'GitLab CI/CD & ArgoCD' },
+            ],
+          },
+          {
+            title: 'Artifact Management & Testing',
+            difficulty: 'intermediate',
+            estimatedMinutes: 60,
+            subtopics: [
+              { title: 'Docker Registry & Nexus/JFrog' },
+              { title: 'Automated Testing in Pipelines' },
+              { title: 'Blue-Green & Canary Deployments' },
+            ],
+          },
+        ],
+      },
+      {
+        title: 'Containerization',
+        order: 3,
+        topics: [
+          {
+            title: 'Docker Fundamentals',
+            difficulty: 'beginner',
+            estimatedMinutes: 90,
+            subtopics: [
+              { title: 'Images, Containers & Registries' },
+              { title: 'Dockerfile Best Practices' },
+              { title: 'Docker Volumes & Networking' },
+            ],
+          },
+          {
+            title: 'Docker Compose & Multi-Container',
+            difficulty: 'intermediate',
+            estimatedMinutes: 60,
+            subtopics: [
+              { title: 'Compose File Structure & Services' },
+              { title: 'Environment Variables & Secrets' },
+              { title: 'Development vs Production Compose' },
+            ],
+          },
+          {
+            title: 'Container Security',
+            difficulty: 'advanced',
+            estimatedMinutes: 60,
+            subtopics: [
+              { title: 'Image Scanning (Trivy, Snyk)' },
+              { title: 'Rootless Containers & Minimal Images' },
+              { title: 'Container Runtime Security' },
+            ],
+          },
+        ],
+      },
+      {
+        title: 'Container Orchestration',
+        order: 4,
+        topics: [
+          {
+            title: 'Kubernetes Core Concepts',
+            difficulty: 'intermediate',
+            estimatedMinutes: 120,
+            subtopics: [
+              { title: 'Pods, Deployments & ReplicaSets' },
+              { title: 'Services, Ingress & Load Balancing' },
+              { title: 'ConfigMaps & Secrets' },
+            ],
+          },
+          {
+            title: 'Kubernetes Advanced',
+            difficulty: 'advanced',
+            estimatedMinutes: 90,
+            subtopics: [
+              { title: 'StatefulSets & DaemonSets' },
+              { title: 'Helm Charts & Package Management' },
+              { title: 'RBAC & Network Policies' },
+            ],
+          },
+          {
+            title: 'Service Mesh & GitOps',
+            difficulty: 'advanced',
+            estimatedMinutes: 75,
+            subtopics: [
+              { title: 'Istio Service Mesh Architecture' },
+              { title: 'ArgoCD & Flux for GitOps' },
+              { title: 'Kubernetes Operators' },
+            ],
+          },
+        ],
+      },
+      {
+        title: 'Cloud & Infrastructure as Code',
+        order: 5,
+        topics: [
+          {
+            title: 'AWS/Cloud Core Services',
+            difficulty: 'intermediate',
+            estimatedMinutes: 90,
+            subtopics: [
+              { title: 'EC2, S3, VPC & IAM' },
+              { title: 'RDS, Lambda & API Gateway' },
+              { title: 'CloudFormation & Resource Management' },
+            ],
+          },
+          {
+            title: 'Terraform & IaC',
+            difficulty: 'intermediate',
+            estimatedMinutes: 90,
+            subtopics: [
+              { title: 'HCL Syntax & Providers' },
+              { title: 'State Management & Remote Backends' },
+              { title: 'Modules & Workspaces' },
+            ],
+          },
+          {
+            title: 'Ansible & Configuration Management',
+            difficulty: 'intermediate',
+            estimatedMinutes: 60,
+            subtopics: [
+              { title: 'Playbooks & Roles' },
+              { title: 'Inventory Management' },
+              { title: 'Ansible Galaxy & Collections' },
+            ],
+          },
+        ],
+      },
+      {
+        title: 'Monitoring & SRE',
+        order: 6,
+        topics: [
+          {
+            title: 'Monitoring & Observability Stack',
+            difficulty: 'intermediate',
+            estimatedMinutes: 90,
+            subtopics: [
+              { title: 'Prometheus Metrics & PromQL' },
+              { title: 'Grafana Dashboards & Alerting' },
+              { title: 'ELK/EFK Stack for Log Management' },
+            ],
+          },
+          {
+            title: 'SRE Principles & Practices',
+            difficulty: 'advanced',
+            estimatedMinutes: 75,
+            subtopics: [
+              { title: 'SLIs, SLOs & Error Budgets' },
+              { title: 'Incident Management & Postmortems' },
+              { title: 'Chaos Engineering (Chaos Monkey)' },
             ],
           },
         ],

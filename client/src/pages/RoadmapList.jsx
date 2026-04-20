@@ -39,6 +39,11 @@ export default function RoadmapList() {
     'MERN': 'from-emerald-500/10 to-teal-500/10 border-emerald-500/20 hover:border-emerald-500/40',
     'Java Backend': 'from-orange-500/10 to-red-500/10 border-orange-500/20 hover:border-orange-500/40',
     'Data Science': 'from-violet-500/10 to-purple-500/10 border-violet-500/20 hover:border-violet-500/40',
+    'Ethical Hacking': 'from-red-500/10 to-rose-500/10 border-red-500/20 hover:border-red-500/40',
+    'Frontend': 'from-pink-500/10 to-fuchsia-500/10 border-pink-500/20 hover:border-pink-500/40',
+    'Backend': 'from-amber-500/10 to-yellow-500/10 border-amber-500/20 hover:border-amber-500/40',
+    'Software Engineering': 'from-sky-500/10 to-indigo-500/10 border-sky-500/20 hover:border-sky-500/40',
+    'DevOps': 'from-lime-500/10 to-green-500/10 border-lime-500/20 hover:border-lime-500/40',
   };
 
   return (

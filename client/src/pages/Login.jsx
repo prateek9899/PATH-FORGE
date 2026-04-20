@@ -34,7 +34,24 @@ export default function Login() {
     <div className="min-h-[80vh] flex items-center justify-center">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <span className="text-4xl">🛤️</span>
+          <svg width="48" height="48" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="mx-auto">
+            <defs>
+              <linearGradient id="loginLogoGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#a78bfa" />
+                <stop offset="50%" stopColor="#6366f1" />
+                <stop offset="100%" stopColor="#3b82f6" />
+              </linearGradient>
+              <linearGradient id="loginLogoGrad2" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#818cf8" />
+                <stop offset="100%" stopColor="#c084fc" />
+              </linearGradient>
+            </defs>
+            <path d="M16 2L28 16L16 30L4 16L16 2Z" fill="url(#loginLogoGrad1)" opacity="0.9"/>
+            <path d="M16 6L24 16L16 26L8 16L16 6Z" fill="#0a0a1a" opacity="0.6"/>
+            <path d="M16 10L20 16L16 22L12 16L16 10Z" fill="url(#loginLogoGrad2)" opacity="0.95"/>
+            <line x1="16" y1="2" x2="16" y2="10" stroke="#c4b5fd" strokeWidth="1" opacity="0.6"/>
+            <line x1="16" y1="22" x2="16" y2="30" stroke="#c4b5fd" strokeWidth="1" opacity="0.6"/>
+          </svg>
           <h1 className="text-3xl font-bold gradient-text mt-3">Welcome Back</h1>
           <p className="text-dark-400 mt-2">Sign in to continue your learning journey</p>
         </div>

@@ -42,7 +42,7 @@ const roadmapSchema = new mongoose.Schema({
   description: { type: String, default: '' },
   domain: {
     type: String,
-    enum: ['DSA', 'MERN', 'Java Backend', 'Data Science'],
+    enum: ['DSA', 'MERN', 'Java Backend', 'Data Science', 'Ethical Hacking', 'Frontend', 'Backend', 'Software Engineering', 'DevOps'],
     required: true,
   },
   icon: { type: String, default: '📚' },

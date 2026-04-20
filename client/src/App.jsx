@@ -28,24 +28,36 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-dark-900">
-      <Navbar />
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
-          <Route path="/roadmaps" element={<ProtectedRoute><RoadmapList /></ProtectedRoute>} />
-          <Route path="/roadmaps/:id" element={<ProtectedRoute><RoadmapDetail /></ProtectedRoute>} />
-          <Route path="/sheets" element={<ProtectedRoute><DSASheets /></ProtectedRoute>} />
-          <Route path="/sheets/:slug" element={<ProtectedRoute><SheetDetail /></ProtectedRoute>} />
-          <Route path="/fundamentals" element={<ProtectedRoute><Fundamentals /></ProtectedRoute>} />
-          <Route path="/companies" element={<ProtectedRoute><Companies /></ProtectedRoute>} />
-          <Route path="/companies/:slug" element={<ProtectedRoute><CompanyDetail /></ProtectedRoute>} />
-          <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </main>
+    <div className="min-h-screen relative">
+      {/* Animated Gradient Mesh Background */}
+      <div className="app-bg">
+        <div className="orb orb-1" />
+        <div className="orb orb-2" />
+        <div className="orb orb-3" />
+        <div className="orb orb-4" />
+      </div>
+      <div className="grain-overlay" />
+
+      {/* Main App Content */}
+      <div className="relative z-10">
+        <Navbar />
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <Routes>
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+            <Route path="/roadmaps" element={<ProtectedRoute><RoadmapList /></ProtectedRoute>} />
+            <Route path="/roadmaps/:id" element={<ProtectedRoute><RoadmapDetail /></ProtectedRoute>} />
+            <Route path="/sheets" element={<ProtectedRoute><DSASheets /></ProtectedRoute>} />
+            <Route path="/sheets/:slug" element={<ProtectedRoute><SheetDetail /></ProtectedRoute>} />
+            <Route path="/fundamentals" element={<ProtectedRoute><Fundamentals /></ProtectedRoute>} />
+            <Route path="/companies" element={<ProtectedRoute><Companies /></ProtectedRoute>} />
+            <Route path="/companies/:slug" element={<ProtectedRoute><CompanyDetail /></ProtectedRoute>} />
+            <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </main>
+      </div>
     </div>
   );
 }
