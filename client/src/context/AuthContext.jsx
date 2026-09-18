@@ -14,17 +14,34 @@ export function AuthProvider({ children }) {
   // On mount, check for an existing token and fetch user
   useEffect(() => {
     const token = localStorage.getItem('pathforge_token');
-    if (token) {
-      api.get('/auth/me')
-        .then((res) => setUser(res.data))
-        .catch(() => {
-          localStorage.removeItem('pathforge_token');
-          setUser(null);
-        })
-        .finally(() => setLoading(false));
-    } else {
+    if (!token) {
       setLoading(false);
+      return;
     }
+
+    // Use AbortController to enforce a timeout — prevents infinite loading
+    // if the backend is cold-starting or unreachable
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 8000); // 8 second timeout
+
+    api.get('/auth/me', { signal: controller.signal })
+      .then((res) => setUser(res.data))
+      .catch((err) => {
+        // On timeout or any error, clear bad token and let user log in fresh
+        if (err.name !== 'CanceledError') {
+          localStorage.removeItem('pathforge_token');
+        }
+        setUser(null);
+      })
+      .finally(() => {
+        clearTimeout(timeoutId);
+        setLoading(false);
+      });
+
+    return () => {
+      clearTimeout(timeoutId);
+      controller.abort();
+    };
   }, []);
 
   const login = async (email, password) => {

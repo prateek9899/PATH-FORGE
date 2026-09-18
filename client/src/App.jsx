@@ -1,5 +1,6 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { useAuth } from './context/AuthContext';
+import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import ProtectedRoute from './components/ProtectedRoute';
 import Login from './pages/Login';
@@ -15,13 +16,37 @@ import Companies from './pages/Companies';
 import CompanyDetail from './pages/CompanyDetail';
 function App() {
   const { loading } = useAuth();
+  const [slowLoad, setSlowLoad] = useState(false);
+
+  // Pre-warm the backend as soon as the app mounts.
+  // Free-tier servers sleep after inactivity — this ping wakes them up early.
+  useEffect(() => {
+    const BACKEND_URL = import.meta.env.VITE_API_URL
+      ? import.meta.env.VITE_API_URL.replace(/\/api$/, '')
+      : '';
+    fetch(`${BACKEND_URL}/api/health`, { method: 'GET' }).catch(() => {});
+  }, []);
+
+  // Show a helpful message if loading takes more than 3 seconds
+  useEffect(() => {
+    if (!loading) return;
+    const t = setTimeout(() => setSlowLoad(true), 3000);
+    return () => clearTimeout(t);
+  }, [loading]);
 
   if (loading) {
     return (
       <div className="min-h-screen bg-dark-900 flex items-center justify-center">
         <div className="flex flex-col items-center gap-4">
           <div className="w-12 h-12 border-4 border-primary-500 border-t-transparent rounded-full animate-spin" />
-          <p className="text-dark-400 text-sm">Loading PathForge...</p>
+          <p className="text-dark-400 text-sm">
+            {slowLoad ? '⏳ Waking up server, please wait...' : 'Loading PathForge...'}
+          </p>
+          {slowLoad && (
+            <p className="text-dark-500 text-xs max-w-xs text-center">
+              The server was asleep. This only happens on first visit.
+            </p>
+          )}
         </div>
       </div>
     );
