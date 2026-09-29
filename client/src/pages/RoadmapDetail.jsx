@@ -13,6 +13,7 @@ export default function RoadmapDetail() {
   const [progress, setProgress] = useState(null);
   const [loading, setLoading] = useState(true);
   const [actionLoading, setActionLoading] = useState(false);
+  const [sessionStartTime, setSessionStartTime] = useState(() => Date.now());
 
   const fetchData = useCallback(async () => {
     try {
@@ -38,9 +39,11 @@ export default function RoadmapDetail() {
     setActionLoading(true);
     try {
       const endpoint = isCompleted ? 'uncomplete' : 'complete';
-      const body = { topicId, timeSpentMinutes: isCompleted ? 0 : 30 };
+      const elapsedMinutes = Math.max(1, Math.round((Date.now() - sessionStartTime) / 60000));
+      const body = { topicId, timeSpentMinutes: isCompleted ? 0 : elapsedMinutes };
       const res = await api.post(`/progress/${id}/${endpoint}`, body);
       setProgress(res.data);
+      if (!isCompleted) setSessionStartTime(Date.now()); // Reset timer for next topic
     } catch (err) {
       console.error('Toggle topic error:', err);
     } finally {
@@ -53,9 +56,11 @@ export default function RoadmapDetail() {
     setActionLoading(true);
     try {
       const endpoint = isCompleted ? 'uncomplete' : 'complete';
-      const body = { topicId, subtopicId, timeSpentMinutes: isCompleted ? 0 : 10 };
+      const elapsedMinutes = Math.max(1, Math.round((Date.now() - sessionStartTime) / 60000));
+      const body = { topicId, subtopicId, timeSpentMinutes: isCompleted ? 0 : elapsedMinutes };
       const res = await api.post(`/progress/${id}/${endpoint}`, body);
       setProgress(res.data);
+      if (!isCompleted) setSessionStartTime(Date.now()); // Reset timer for next subtopic
     } catch (err) {
       console.error('Toggle subtopic error:', err);
     } finally {
