@@ -1,0 +1,38 @@
+
+# Dynamic Programming
+
+Dynamic programming solves problems by storing results of smaller subproblems.
+
+The two common properties are:
+- Overlapping subproblems: the same subproblems occur repeatedly.
+- Optimal substructure: an optimal solution can be built from optimal solutions to smaller subproblems.
+
+Memoization is top-down: recursion computes and caches results.
+Tabulation is bottom-up: an iterative table computes smaller states first.
+
+Steps:
+1. Define the state.
+2. Derive the transition.
+3. Set base cases.
+4. Choose memoization or tabulation.
+5. Optimize space when possible.
+
+Fibonacci:
+F(0) = 0, F(1) = 1.
+F(n) = F(n-1) + F(n-2).
+
+Naive recursion takes exponential time. Memoization and tabulation take O(n) time. Standard memoization uses O(n) space including recursion; iterative tabulation can use O(1) space for Fibonacci.
+
+Common problems:
+- Climbing stairs.
+- House robber.
+- Coin change.
+- 0/1 knapsack.
+- Longest common subsequence.
+- Longest increasing subsequence.
+- Edit distance.
+- Grid path problems.
+- Partition equal subset sum.
+- Matrix-chain multiplication.
+
+DP is not simply recursion. The state and transition must accurately represent the problem.

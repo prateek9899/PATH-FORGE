@@ -1,0 +1,17 @@
+
+# Searching and Sorting
+
+Linear search checks elements one by one. Time: O(n), space: O(1).
+
+Binary search requires sorted data or a monotonic search condition. It repeatedly halves the search range. Time: O(log n), iterative space: O(1).
+
+Bubble sort repeatedly swaps adjacent out-of-order elements. Average and worst time: O(n^2).
+Selection sort repeatedly selects the minimum remaining element. Time: O(n^2).
+Insertion sort inserts each element into its correct position in the sorted prefix. Worst time: O(n^2); best time: O(n).
+Merge sort divides the array, sorts both halves, and merges them. Time: O(n log n), auxiliary space: O(n) for arrays.
+Quick sort partitions around a pivot. Average time: O(n log n); worst time: O(n^2).
+Heap sort uses a heap. Time: O(n log n).
+
+Stable sorting preserves the relative order of equal elements. Merge sort is typically stable when implemented correctly; standard quicksort is generally not stable.
+
+In Java, Arrays.sort() sorts primitive arrays efficiently. Object-array sorting is stable. Choose a custom comparator when sorting objects by a property.

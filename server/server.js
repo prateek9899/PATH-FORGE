@@ -15,6 +15,7 @@ const fundamentalRoutes = require('./routes/fundamentals');
 const companyRoutes = require('./routes/companies');
 const systemDesignRoutes = require('./routes/systemDesign');
 const behavioralRoutes = require('./routes/behavioral');
+const aiTutorRoutes = require("./routes/aitutor");
 
 const app = express();
 
@@ -34,6 +35,7 @@ app.use('/api/fundamentals', fundamentalRoutes);
 app.use('/api/companies', companyRoutes);
 app.use('/api/system-design', systemDesignRoutes);
 app.use('/api/behavioral', behavioralRoutes);
+app.use("/api/ai-tutor", aiTutorRoutes);
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {

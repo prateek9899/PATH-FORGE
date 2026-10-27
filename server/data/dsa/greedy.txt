@@ -1,0 +1,22 @@
+
+# Greedy Algorithms
+
+A greedy algorithm makes a locally optimal choice at each step. A greedy strategy is correct only when the problem has the required greedy-choice property and optimal substructure.
+
+Common examples:
+- Activity selection by earliest finishing time.
+- Fractional knapsack by value-to-weight ratio.
+- Huffman coding.
+- Minimum number of platforms using sorted arrival and departure times.
+- Interval merging and scheduling variants.
+- Minimum spanning trees using Kruskal or Prim.
+
+Greedy does not solve every optimization problem. For example, the general 0/1 knapsack problem cannot be solved optimally by simply choosing the highest value-to-weight ratio.
+
+To validate a greedy solution:
+1. Identify the proposed local choice.
+2. Explain why an optimal solution can include that choice.
+3. Show that the remaining problem has the same structure.
+4. Analyze time and space complexity.
+
+Sorting often makes greedy solutions efficient. Always test counterexamples before assuming a strategy is correct.

@@ -14,6 +14,7 @@ import SheetDetail from './pages/SheetDetail';
 import Fundamentals from './pages/Fundamentals';
 import Companies from './pages/Companies';
 import CompanyDetail from './pages/CompanyDetail';
+import AITutor from './pages/aitutor';
 function App() {
   const { loading } = useAuth();
   const [slowLoad, setSlowLoad] = useState(false);
@@ -24,7 +25,7 @@ function App() {
     const BACKEND_URL = import.meta.env.VITE_API_URL
       ? import.meta.env.VITE_API_URL.replace(/\/api$/, '')
       : '';
-    fetch(`${BACKEND_URL}/api/health`, { method: 'GET' }).catch(() => {});
+    fetch(`${BACKEND_URL}/api/health`, { method: 'GET' }).catch(() => { });
   }, []);
 
   // Show a helpful message if loading takes more than 3 seconds
@@ -80,6 +81,14 @@ function App() {
             <Route path="/companies/:slug" element={<ProtectedRoute><CompanyDetail /></ProtectedRoute>} />
             <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
             <Route path="*" element={<Navigate to="/" replace />} />
+            <Route
+              path="/ai-tutor"
+              element={
+                <ProtectedRoute>
+                  <AITutor />
+                </ProtectedRoute>
+              }
+            />
           </Routes>
         </main>
       </div>

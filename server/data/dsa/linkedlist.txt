@@ -1,0 +1,21 @@
+
+# Linked Lists
+
+A linked list consists of nodes that store data and references to other nodes.
+
+Singly linked lists point to the next node. Doubly linked lists point to both previous and next nodes. Circular lists connect the final node back to the beginning.
+
+Accessing an element by position takes O(n). Inserting or deleting at a known node can take O(1), provided the required references are available.
+
+Important techniques:
+- Reverse a linked list using previous, current, and next pointers.
+- Find the middle using slow and fast pointers.
+- Detect a cycle using Floyd's tortoise-and-hare algorithm.
+- Merge two sorted lists using a dummy node.
+- Find the start of a cycle using Floyd's algorithm.
+- Remove the nth node from the end using two pointers.
+
+Reversing a list takes O(n) time and O(1) auxiliary space iteratively.
+Cycle detection takes O(n) time and O(1) space.
+
+In Java, a custom Node class commonly contains an int value and a Node next reference.

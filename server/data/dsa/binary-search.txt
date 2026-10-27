@@ -1,0 +1,22 @@
+
+# Binary Search Patterns
+
+Binary search works on sorted arrays or on a search space where a condition changes monotonically.
+
+Classic binary search:
+- Set low = 0 and high = n - 1.
+- While low <= high, calculate mid = low + (high - low) / 2.
+- If nums[mid] equals target, return mid.
+- If nums[mid] is smaller, set low = mid + 1.
+- Otherwise, set high = mid - 1.
+- Return -1 if not found.
+
+Time: O(log n). Iterative auxiliary space: O(1).
+
+Lower bound finds the first index with value >= target. Upper bound finds the first index with value > target.
+
+Binary search on the answer is useful when feasibility is monotonic. Examples include minimum capacity, minimum maximum workload, and minimum feasible time.
+
+For rotated sorted arrays, determine which half is sorted and decide which half can contain the target.
+
+Avoid infinite loops by updating boundaries correctly. Use mid = low + (high - low) / 2 to avoid integer overflow from low + high.

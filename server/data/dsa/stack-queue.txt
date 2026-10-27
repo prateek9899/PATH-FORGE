@@ -1,0 +1,25 @@
+
+# Stacks and Queues
+
+A stack follows LIFO: last in, first out. Main operations are push, pop, and peek.
+
+A queue follows FIFO: first in, first out. Main operations are offer, poll, and peek.
+
+Java options:
+- ArrayDeque can implement a stack or queue.
+- Queue is an interface.
+- PriorityQueue provides priority-based removal, not ordinary FIFO behavior.
+
+Common stack problems:
+- Valid parentheses.
+- Next greater element.
+- Monotonic stack.
+- Evaluate postfix expressions.
+- Largest rectangle in a histogram.
+
+Common queue problems:
+- Breadth-first search.
+- Level-order tree traversal.
+- Sliding-window maximum using a deque.
+
+Typical push, pop, enqueue, and dequeue operations take O(1) amortized time for standard implementations. A monotonic-stack solution to next greater element takes O(n) time because each element is pushed and popped at most once.

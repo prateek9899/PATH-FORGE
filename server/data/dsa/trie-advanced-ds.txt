@@ -1,0 +1,22 @@
+
+# Trie and Advanced Data Structures
+
+A trie stores strings by shared prefixes. Each node represents a prefix and may contain child references and an end-of-word flag.
+
+For a word of length L, insertion and lookup take O(L) time. Space depends on the number of nodes and child representation.
+
+Common trie problems:
+- Prefix search.
+- Word dictionary.
+- Word search with many words.
+- Maximum XOR using a binary trie.
+
+Disjoint Set Union (DSU) supports find and union operations. Path compression and union by rank or size give nearly constant amortized operation time, O(alpha(n)).
+
+A Fenwick tree supports prefix sums and point updates in O(log n) time, usually with O(n) space.
+
+A segment tree supports range queries and point updates in O(log n) time for common operations. Lazy propagation can handle certain range updates efficiently.
+
+Monotonic queues and stacks maintain elements in an ordered structure for range and next-greater problems.
+
+Choose a data structure based on the operations required, such as lookup, prefix search, connectivity, range queries, or updates.

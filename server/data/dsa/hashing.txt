@@ -1,0 +1,26 @@
+
+# Hashing
+
+Hashing maps a key to a bucket using a hash function. Hash tables support expected O(1) insertion, lookup, and deletion, though worst-case operations can be O(n).
+
+In Java:
+- HashMap stores key-value pairs.
+- HashSet stores unique values.
+- LinkedHashMap maintains insertion order.
+- TreeMap stores sorted keys with O(log n) basic operations.
+
+Common uses:
+- Counting element frequencies.
+- Detecting duplicates.
+- Finding Two Sum.
+- Grouping anagrams.
+- Tracking visited elements.
+- Finding the first non-repeating character.
+
+HashMap example:
+Map<Integer, Integer> frequency = new HashMap<>();
+for (int value : nums) {
+    frequency.put(value, frequency.getOrDefault(value, 0) + 1);
+}
+
+Always consider collisions, key equality, and the memory required by stored entries.

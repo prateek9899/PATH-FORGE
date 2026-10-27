@@ -1,0 +1,20 @@
+
+# Arrays and Strings
+
+An array stores elements in indexed positions. Access by index is O(1). Searching an unsorted array takes O(n). Inserting or deleting near the beginning usually takes O(n) because elements must shift.
+
+A string is a sequence of characters. In Java, String objects are immutable. Use StringBuilder for repeated modifications.
+
+Common techniques:
+- Two pointers: move two indices to solve pair, reversal, or partition problems.
+- Sliding window: maintain a contiguous range while expanding and shrinking it.
+- Prefix sum: prefix[i] stores the sum before or through position i, depending on convention.
+- Difference array: efficiently represents range updates.
+- Kadane's algorithm: maximum subarray sum in O(n).
+- Sorting: can simplify duplicate detection and pair problems.
+
+Two Sum with a hash map takes expected O(n) time and O(n) space.
+Reverse an array with two pointers in O(n) time and O(1) extra space.
+Maximum subarray sum using Kadane's algorithm takes O(n) time and O(1) extra space.
+
+In Java, arrays have fixed length. Use ArrayList when a resizable list is needed.

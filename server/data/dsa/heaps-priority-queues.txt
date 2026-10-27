@@ -1,0 +1,27 @@
+
+# Heaps and Priority Queues
+
+A binary heap is a complete binary tree commonly represented as an array.
+
+In a min-heap, each parent is <= its children. In a max-heap, each parent is >= its children.
+
+For a zero-indexed array:
+- Left child: 2*i + 1.
+- Right child: 2*i + 2.
+- Parent: (i - 1) / 2 for non-root indices.
+
+Peek at the root: O(1).
+Insert: O(log n).
+Remove the root: O(log n).
+Build a heap from an array: O(n).
+
+Java PriorityQueue is a min-heap by default. Use a reverse comparator for a max-heap.
+
+Common problems:
+- Kth largest or smallest element.
+- Top K frequent elements.
+- Merge K sorted lists.
+- Find the median from a data stream.
+- Schedule tasks by priority.
+
+For kth largest, a min-heap of size k can process n elements in O(n log k) time and O(k) extra space.

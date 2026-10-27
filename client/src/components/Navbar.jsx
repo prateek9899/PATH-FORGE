@@ -20,15 +20,15 @@ function PathForgeLogo() {
         </linearGradient>
       </defs>
       {/* Outer diamond */}
-      <path d="M16 2L28 16L16 30L4 16L16 2Z" fill="url(#logoGrad1)" opacity="0.9"/>
+      <path d="M16 2L28 16L16 30L4 16L16 2Z" fill="url(#logoGrad1)" opacity="0.9" />
       {/* Inner path/road lines */}
-      <path d="M16 6L24 16L16 26L8 16L16 6Z" fill="#0a0a1a" opacity="0.6"/>
+      <path d="M16 6L24 16L16 26L8 16L16 6Z" fill="#0a0a1a" opacity="0.6" />
       {/* Center forge spark */}
-      <path d="M16 10L20 16L16 22L12 16L16 10Z" fill="url(#logoGrad2)" opacity="0.95"/>
+      <path d="M16 10L20 16L16 22L12 16L16 10Z" fill="url(#logoGrad2)" opacity="0.95" />
       {/* Accent line top */}
-      <line x1="16" y1="2" x2="16" y2="10" stroke="#c4b5fd" strokeWidth="1" opacity="0.6"/>
+      <line x1="16" y1="2" x2="16" y2="10" stroke="#c4b5fd" strokeWidth="1" opacity="0.6" />
       {/* Accent line bottom */}
-      <line x1="16" y1="22" x2="16" y2="30" stroke="#c4b5fd" strokeWidth="1" opacity="0.6"/>
+      <line x1="16" y1="22" x2="16" y2="30" stroke="#c4b5fd" strokeWidth="1" opacity="0.6" />
     </svg>
   );
 }
@@ -50,10 +50,9 @@ export default function Navbar() {
   const isActive = (path) => location.pathname === path;
 
   const navLinkClass = (path) =>
-    `px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-      isActive(path)
-        ? 'bg-primary-600/20 text-primary-400'
-        : 'text-dark-400 hover:text-dark-200 hover:bg-dark-800/50'
+    `px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${isActive(path)
+      ? 'bg-primary-600/20 text-primary-400'
+      : 'text-dark-400 hover:text-dark-200 hover:bg-dark-800/50'
     }`;
 
   return (
@@ -72,9 +71,11 @@ export default function Navbar() {
           {user ? (
             <>
               <div className="flex items-center gap-1 overflow-x-auto no-scrollbar flex-1 justify-center px-4">
+
                 <Link to="/" className={navLinkClass('/')}>Dashboard</Link>
                 <Link to="/roadmaps" className={navLinkClass('/roadmaps')}>Roadmaps</Link>
                 <Link to="/sheets" className={navLinkClass('/sheets')}>DSA Sheets</Link>
+                <Link to="/ai-tutor" className={navLinkClass('/ai-tutor')}>AI Tutor</Link>
                 <Link to="/companies" className={navLinkClass('/companies')}>Companies</Link>
                 <Link to="/fundamentals" className={navLinkClass('/fundamentals')}>Notes</Link>
               </div>

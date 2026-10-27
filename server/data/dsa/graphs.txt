@@ -1,0 +1,22 @@
+
+# Graphs
+
+A graph consists of vertices and edges. Graphs can be directed or undirected, weighted or unweighted.
+
+Representations:
+- Adjacency list: usually O(V + E) space.
+- Adjacency matrix: O(V^2) space and O(1) edge lookup.
+
+BFS uses a queue and explores level by level. DFS uses recursion or an explicit stack. Both take O(V + E) time with an adjacency list when each vertex and edge is processed a constant number of times.
+
+Important algorithms:
+- BFS for shortest paths in unweighted graphs.
+- DFS for traversal, components, and cycle detection.
+- Topological sort for directed acyclic graphs.
+- Dijkstra for non-negative edge weights.
+- Bellman-Ford for negative edges and negative-cycle detection.
+- Floyd-Warshall for all-pairs shortest paths.
+- Kruskal and Prim for minimum spanning trees.
+- Disjoint Set Union for connectivity and Kruskal's algorithm.
+
+Always track visited vertices to avoid repeated work. For disconnected graphs, start traversal from every unvisited vertex if all components must be covered.

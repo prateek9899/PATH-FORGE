@@ -1,0 +1,25 @@
+
+# Trees and Binary Search Trees
+
+A tree is a hierarchical data structure. A binary tree has at most two children per node.
+
+Traversals:
+- Preorder: root, left, right.
+- Inorder: left, root, right.
+- Postorder: left, right, root.
+- Level order: visit nodes level by level using a queue.
+
+Depth-first traversals typically take O(n) time. Their auxiliary space is O(h), where h is tree height, excluding output storage. Level-order traversal can require O(n) space.
+
+A binary search tree has values smaller than a node in its left subtree and larger values in its right subtree, subject to its duplicate policy. Search, insertion, and deletion take O(h), where h is height. A balanced BST has O(log n) height; a skewed BST can have O(n) height.
+
+Common problems:
+- Maximum depth.
+- Diameter of a binary tree.
+- Balanced tree checking.
+- Lowest common ancestor.
+- Validate a BST.
+- Serialize and deserialize a tree.
+- Construct a tree from traversals.
+
+For Java, a TreeNode often contains int val, TreeNode left, and TreeNode right.

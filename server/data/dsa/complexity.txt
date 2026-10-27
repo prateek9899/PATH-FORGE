@@ -1,0 +1,23 @@
+
+# Time and Space Complexity
+
+Time complexity describes how an algorithm's running time grows with input size n. Space complexity describes how its memory usage grows.
+
+Big O describes an asymptotic upper bound. Common complexities:
+- O(1): constant
+- O(log n): logarithmic
+- O(n): linear
+- O(n log n): linearithmic
+- O(n^2): quadratic
+- O(2^n): exponential
+- O(n!): factorial
+
+A single loop over n elements is usually O(n). Two nested loops each running n times are usually O(n^2). Repeatedly halving a search range gives O(log n).
+
+Binary search: O(log n) time.
+Linear search: O(n) time.
+Merge sort: O(n log n) time and O(n) auxiliary space for arrays.
+Heap sort: O(n log n) time and O(1) auxiliary array space.
+Hash table lookup: expected O(1), worst-case O(n).
+
+Analyze loops, recursion, data structure operations, and auxiliary memory. State best, average, or worst case when relevant.

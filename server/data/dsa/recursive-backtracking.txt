@@ -1,0 +1,27 @@
+
+# Recursion and Backtracking
+
+Recursion occurs when a function calls itself. Every recursive solution needs a base case and progress toward that case.
+
+The call stack uses memory for active function calls. Deep recursion can cause StackOverflowError in Java.
+
+Backtracking explores choices, undoes a choice, and explores another path.
+
+Common problems:
+- Factorial and Fibonacci.
+- Generate subsets and permutations.
+- Combination sum.
+- N-Queens.
+- Sudoku solver.
+- Word search.
+
+For subsets of n elements, there are 2^n subsets. Generating all subsets requires at least O(2^n) output work, excluding output representation details.
+
+A backtracking template:
+1. Check whether the current state is a solution.
+2. Iterate through available choices.
+3. Make a choice.
+4. Recursively explore.
+5. Undo the choice.
+
+Use a boolean visited array or a set when choices must not be reused. Check constraints carefully to prevent invalid branches.

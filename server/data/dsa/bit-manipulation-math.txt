@@ -1,0 +1,32 @@
+
+# Bit Manipulation and Mathematical Algorithms
+
+Bitwise operators in Java:
+- &: AND.
+- |: OR.
+- ^: XOR.
+- ~: NOT.
+- <<: left shift.
+- >>: signed right shift.
+- >>>: unsigned right shift.
+
+Useful properties:
+- x ^ x = 0.
+- x ^ 0 = x.
+- x & 1 checks the least significant bit.
+- x & (x - 1) clears the lowest set bit for positive x.
+- x > 0 and (x & (x - 1)) == 0 checks whether x is a power of two.
+
+Common techniques:
+- Count set bits.
+- Check or toggle a bit.
+- Find a unique element using XOR when other elements occur in pairs.
+- Generate subsets using bit masks.
+
+Mathematical topics:
+- Greatest common divisor using Euclid's algorithm.
+- Least common multiple: abs(a / gcd(a,b) * b), with overflow considerations.
+- Sieve of Eratosthenes for primes up to n in O(n log log n) time.
+- Fast exponentiation in O(log exponent) multiplications.
+
+Java int uses 32 bits and long uses 64 bits. Be careful with overflow, negative values, and shift semantics.
